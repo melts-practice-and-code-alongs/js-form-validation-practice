@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Rajdhani', sans-serif;
+	background-image: url('clouds.JPG');
+	background-size: cover;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+.glass {
+	width: 40em;
+	max-width: 700px;
+	background-color: rgba(255,255,255,0.1);
+	padding: 3.5em 4.5em;
+	border-radius: 25px;
+	color: white;
+	backdrop-filter: blur(25px); /* originally 30px */
+	border: 2px solid transparent;
+	background-clip: padding-box;
+	box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.03);
+	line-height: 1.5;
+}
+
+.form-title {
+	text-align: center;
+	padding-bottom: 2rem;
+	font-size: 3.5rem;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+#form {
+	width: 300px;
+	padding: 1.25em;
+	font-size: 1rem;
+}
+
+span {
+	padding: 10px 25px;
+}
+
+.btn {
+	color: #fff;
+	border-radius: 10px;
+	margin-top: 1.5em;
+	font-weight: 300;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	7px 7px 20px 0px rgba(0,0,0,.1),
+	4px 4px 5px 0px rgba(0,0,0,.1);
+	outline: none;
+	font-family: 'Rajdhani', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.17rem;
+	letter-spacing: 10px;
+}
+
+.glow-btn {
+	background-color: #b86178;
+	background-image: linear-gradient(315deg, #e19482 0%, #493a4d 74%);
+	line-height: 42px;
+	padding: 0;
+	border: none;
+}
+
+.glow-btn:hover{
+	background-color: #a86d98;
+	background-image: linear-gradient(315deg, #fe9d64 0%, #9491a2 74%);
+}
+
+.glow-btn span {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.glow-btn:before,
+.glow-btn:after {
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 0;
+	box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+	-4px -4px 6px 0 rgba(116, 125, 136, .2), 
+	inset -4px -4px 6px 0 rgba(255,255,255,.9),
+	inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+	transition: all 0.3s ease;
+}
+
+.glow-btn:before {
+	height: 0%;
+	width: .1px;
+}
+
+.glow-btn:after {
+	width: 0%;
+	height: .1px;
+}
+
+.glow-btn:hover:before {
+	height: 100%;
+}
+
+.glow-btn:hover:after {
+	width: 100%;
+}
+
+.glow-btn span:before,
+.glow-btn span:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+	-4px -4px 6px 0 rgba(116, 125, 136, .2), 
+	inset -4px -4px 6px 0 rgba(255,255,255,.9),
+	inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+	transition: all 0.3s ease;
+}
+
+.glow-btn span:before {
+	width: .1px;
+	height: 0%;
+}
+
+.glow-btn span:after {
+	width: 0%;
+	height: .1px;
+}
+.glow-btn span:hover:before {
+	height: 100%;
+}
+
+.glow-btn span:hover:after {
+	width: 100%;
+}
+
+.input-control {
+	margin-bottom: .5em;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-control input {
+	border: 1px solid #CE9898;
+	border-radius: 10px;
+	display: block;
+	font-size: 1rem;
+	padding: .7em;
+	width: 100%;
+	color: #fff;
+	background-color: rgba(238, 140, 140, .7);
+}
+
+.input-control input:focus {
+	outline: 0;
+}
+
+.input-control.success input {
+	border-color: rebeccapurple;
+}
+
+.input-control.error input {
+	border-color: black;
+}
+
+.input-control .error {
+	color: #ff3860;
+	font-size: 9px;
+	height: 13px;
+}
