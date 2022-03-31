@@ -37,7 +37,7 @@ const setError = (element, message) => {
 
 const setSuccess = element => {
 	const inputControl = element.parentElement;
-	const errorDisplay = input.querySelector('error');
+	const errorDisplay = inputControl.querySelector('error');
 
 	//If there was a previous error that had been triggered,
 	//this line of code clears the error message. It adds
